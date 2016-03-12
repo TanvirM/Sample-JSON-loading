@@ -188,5 +188,20 @@
 <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+<script type="text/javascript">
+    try{
+        console.log('hello');
+        $.getJSON('country.json', function(data){
+            for (var i in data){
+                console.log(data[name]);
+                //$select.append('<option>'+ data[name] + '</option>');
+            }
+        });
+    } catch(e){
+        console.log(e instanceof ReferenceError);
+    }
+</script>
+
 </body>
 </html>
